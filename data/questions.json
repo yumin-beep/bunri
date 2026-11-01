@@ -1,0 +1,224 @@
+{
+ "oil": {
+  "en": "Is the inside oil-stained?",
+  "ko": "안쪽 종이에 기름이 묻었나요?",
+  "options": [
+   {
+    "en": "Yes, oily",
+    "ko": "네, 묻었어요",
+    "bin": "general",
+    "note_en": "Oil-stained inner paper → general bag. Clean parts of the box can still go to paper.",
+    "hint": [
+     "기름",
+     "기름진",
+     "기름묻은",
+     "oily",
+     "greasy",
+     "grease",
+     "stained",
+     "더러운"
+    ]
+   },
+   {
+    "en": "No, clean",
+    "ko": "아니요, 깨끗해요",
+    "bin": "paper",
+    "hint": [
+     "clean",
+     "깨끗"
+    ]
+   }
+  ]
+ },
+ "coated": {
+  "en": "Is it glossy vinyl-coated or plastic (synthetic) paper?",
+  "ko": "비닐 코팅지나 플라스틱 합성지인가요?",
+  "options": [
+   {
+    "en": "Yes, coated/synthetic",
+    "ko": "네, 코팅됐어요",
+    "bin": "general",
+    "hint": [
+     "코팅",
+     "coated",
+     "glossy",
+     "laminated",
+     "합성지",
+     "synthetic"
+    ]
+   },
+   {
+    "en": "No, plain paper",
+    "ko": "아니요, 그냥 종이예요",
+    "bin": "paper",
+    "hint": [
+     "plain",
+     "일반"
+    ]
+   }
+  ]
+ },
+ "separable": {
+  "en": "Can you take it apart by material?",
+  "ko": "재질별로 분리할 수 있나요?",
+  "options": [
+   {
+    "en": "Yes",
+    "ko": "네",
+    "bin": "material",
+    "note_en": "Separate the parts and put each in its own bin."
+   },
+   {
+    "en": "No",
+    "ko": "아니요",
+    "bin": "general"
+   }
+  ]
+ },
+ "fits_bag": {
+  "en": "Does it fit in a pay-as-you-throw garbage bag?",
+  "ko": "종량제 봉투에 들어가나요?",
+  "options": [
+   {
+    "en": "Yes, it fits",
+    "ko": "네, 들어가요",
+    "bin": "general",
+    "hint": [
+     "small",
+     "작은",
+     "mini",
+     "미니"
+    ]
+   },
+   {
+    "en": "No, too big",
+    "ko": "아니요, 커요",
+    "bin": "bulky",
+    "hint": [
+     "big",
+     "large",
+     "huge",
+     "큰",
+     "대형"
+    ]
+   }
+  ]
+ },
+ "broken": {
+  "en": "Is it broken?",
+  "ko": "깨졌나요?",
+  "options": [
+   {
+    "en": "Yes, broken",
+    "ko": "네, 깨졌어요",
+    "bin": "general",
+    "note_en": "Wrap it in newspaper so no one gets cut (MoE guideline p.12).",
+    "hint": [
+     "broken",
+     "cracked",
+     "깨진",
+     "깨졌"
+    ]
+   },
+   {
+    "en": "No, intact",
+    "ko": "아니요",
+    "bin": "dropoff"
+   }
+  ]
+ },
+ "material": {
+  "en": "What is it mostly made of?",
+  "ko": "주로 어떤 재질인가요?",
+  "options": [
+   {
+    "en": "Plastic",
+    "ko": "플라스틱",
+    "bin": "plastic",
+    "hint": [
+     "plastic",
+     "플라스틱",
+     "pp",
+     "pe"
+    ]
+   },
+   {
+    "en": "Metal",
+    "ko": "금속",
+    "bin": "metal",
+    "hint": [
+     "metal",
+     "steel",
+     "stainless",
+     "aluminum",
+     "금속",
+     "스텐",
+     "스테인리스",
+     "철"
+    ]
+   },
+   {
+    "en": "Glass or ceramic",
+    "ko": "유리·도자기",
+    "bin": "nonburnable",
+    "hint": [
+     "glass",
+     "ceramic",
+     "porcelain",
+     "유리",
+     "도자기",
+     "사기"
+    ]
+   },
+   {
+    "en": "Wood or mixed",
+    "ko": "나무·혼합",
+    "bin": "general",
+    "note_en": "No recycling stream for wood/mixed items; the guide puts similar items (wooden chopsticks, wooden combs) in the general bag.",
+    "hint": [
+     "wood",
+     "wooden",
+     "나무",
+     "원목"
+    ]
+   }
+  ]
+ },
+ "clear": {
+  "en": "Is the bottle clear and colourless?",
+  "ko": "투명한 무색 페트병인가요?",
+  "options": [
+   {
+    "en": "Yes, clear",
+    "ko": "네, 투명해요",
+    "bin": "clear_pet",
+    "note_en": "Clear PET goes separately: empty, label off, crush, cap on (Seoul 2024).",
+    "hint": [
+     "clear",
+     "transparent",
+     "colorless",
+     "colourless",
+     "투명",
+     "무색",
+     "생수",
+     "water"
+    ]
+   },
+   {
+    "en": "No, coloured",
+    "ko": "아니요, 색이 있어요",
+    "bin": "plastic",
+    "hint": [
+     "green",
+     "brown",
+     "colored",
+     "coloured",
+     "유색",
+     "초록",
+     "갈색",
+     "녹색"
+    ]
+   }
+  ]
+ }
+}

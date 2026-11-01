@@ -1,0 +1,22 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;width:1280px;height:720px;display:flex;align-items:center;justify-content:center;background:#f6f5f0;font-family:"Noto Sans KR",system-ui,sans-serif;color:#1d2321}
+.s{display:none;width:1080px}.s.on{display:block}
+h1{font-size:64px;margin:0 0 16px}h2{font-size:40px;margin:0 0 24px}p{font-size:28px;line-height:1.45;margin:0 0 14px;color:#3a4440}
+.logo{display:inline-block;background:#1f3b2d;color:#fff;border-radius:14px;padding:6px 16px;font-size:44px;margin-right:16px;vertical-align:middle}
+table{border-collapse:collapse;font-size:26px;width:100%}td,th{border-bottom:1px solid #d9d6cc;padding:12px 10px;text-align:left}th{color:#5e6b66;font-weight:500}
+td.b{font-weight:700;color:#1f3b2d}.small{font-size:20px;color:#5e6b66}
+.tags span{display:inline-block;border:2px solid #1f3b2d;border-radius:999px;padding:6px 16px;margin:6px;font-size:24px}
+</style></head><body>
+<div class="s" id="s1"><h1><span class="logo">분리</span>Bunri</h1><p>Which bin does it go in? Korea's sorting rules, answered with the official sentence.</p><p class="small">Arbiter Hacks V1 · Theme track: Rethinking Waste</p></div>
+<div class="s" id="s2"><h2>The rules are in a 34-page PDF</h2><p>Korea sorts household waste into more than a dozen streams. The Ministry of Environment's guide lists hundreds of items, and many look recyclable but aren't:</p><div class="tags"><span>receipts</span><span>eggshells</span><span>ice packs</span><span>oily pizza boxes</span></div><p>Of 75,000 t of paper cartons shipped in 2022, about 60% were mixed into waste paper and 27% went into garbage bags (Hankook Ilbo, 2024). A plain search box misses typos and English; a chatbot can't show its source.</p></div>
+<div class="s" id="s3"><h2>Tested on 129 fresh queries</h2><table><tr><th></th><th>Bunri</th><th>Search box, same names + aliases</th></tr>
+<tr><td>Direct answer, right bin</td><td>36%</td><td>66%</td></tr>
+<tr><td>Right item among 3 options shown</td><td>57%</td><td>–</td></tr>
+<tr><td>Resolved (either)</td><td class="b">93%</td><td>66%</td></tr>
+<tr><td>Confident answers in the wrong bin</td><td class="b">2</td><td>24</td></tr></table>
+<p class="small" style="margin-top:18px">Synthetic queries written for this project (Korean + English, typos, 7 items not in the guide), never used for tuning. Bunri asks more often than it answers, and in return rarely picks the wrong bin. Reproduce: node scripts/eval.mjs</p></div>
+<div class="s" id="s4"><h2>How it works</h2><p>316 entries from the Ministry of Environment guide, Seoul and a 2026 Q&amp;A, each with its source page. Newer rules override older ones, and the old sentence stays visible.</p><p>Korean is split into jamo, so "껍떼기" still finds "껍질". TF-IDF over character n-grams, plus a check that every typed word is explained.</p><p>A tuned threshold decides: answer, show 3 candidates, or say "not in the guide".</p><p>Static PWA: works offline, no server, no API key.</p></div>
+<div class="s" id="s6"><h1><span class="logo">분리</span>Bunri</h1><p>Code: github.com/yumin-beep/bunri</p><p class="small">Arbiter Hacks V1 · Theme track: Rethinking Waste<br>Narration: AI-synthesized voice (Supertonic 3)</p></div>
+<div class="s" id="s5"><h2>Measuring it</h2><p>Pilot: one dorm or apartment block, 4 weeks. Weeks 1–2 baseline, weeks 3–4 with a QR code to Bunri at the recycling area.</p><p>Measure contamination in recycling bags (same sample each week) and the on-device pilot log: lookups, items not in the guide, "still not sure".</p><h2 style="margin-top:28px">Next</h2><p>Per-district rule files · the 2026 directive table · photo input into the same answer / ask / abstain flow.</p></div>
+<script>window.show=id=>{document.querySelectorAll('.s').forEach(e=>e.classList.toggle('on',e.id===id))};show('s1')</script>
+</body></html>

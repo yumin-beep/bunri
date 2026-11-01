@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunri — Korean recycling rules, with the source</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1f3b2d">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">분리</span><span>Bunri</span></div>
+  <div class="lang"><button data-lang="en" class="on">EN</button><button data-lang="ko">한국어</button></div>
+</header>
+<main>
+  <p class="lead" data-t="lead">What are you throwing away?</p>
+  <input id="q" autocomplete="off" autofocus>
+  <div class="examples" id="examples"></div>
+  <section id="out" aria-live="polite"></section>
+</main>
+<footer>
+  <span data-t="foot">Answers quote official sources: the Ministry of Environment sorting guide (재활용품 분리배출 가이드라인) and newer official Q&amp;A. Local rules can differ.</span>
+  <button id="pilot" class="link" data-t="pilotbtn">Pilot log</button>
+</footer>
+<dialog id="pilotDlg">
+  <h3 data-t="pilotTitle">Pilot log (stored on this device only)</h3>
+  <div id="pilotStats"></div>
+  <menu><button id="exportCsv" data-t="export">Export CSV</button><button id="closeDlg" data-t="close">Close</button></menu>
+</dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>

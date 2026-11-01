@@ -1,0 +1,37 @@
+:root{--ink:#1d2321;--muted:#5e6b66;--bg:#f6f5f0;--card:#fff;--line:#e2e0d8;--accent:#1f3b2d}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR",system-ui,sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex;flex-direction:column}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--line);background:#fff}
+.brand{display:flex;gap:10px;align-items:center;font-weight:700;font-size:18px}
+.logo{background:var(--accent);color:#fff;border-radius:8px;padding:3px 8px;font-size:15px}
+.lang button{border:1px solid var(--line);background:#fff;padding:5px 10px;font-size:13px;cursor:pointer}
+.lang button.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.lang button:first-child{border-radius:6px 0 0 6px}.lang button:last-child{border-radius:0 6px 6px 0}
+main{width:100%;max-width:640px;margin:0 auto;padding:28px 20px;flex:1}
+.lead{font-size:22px;font-weight:700;margin:0 0 12px}
+#q{width:100%;font-size:20px;padding:14px 16px;border:2px solid var(--accent);border-radius:12px;outline:none;background:#fff}
+.examples{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 20px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-size:14px;cursor:pointer;color:var(--ink)}
+.chip:hover{border-color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:12px}
+.bin{display:flex;align-items:center;gap:12px;margin:2px 0 12px}
+.badge{color:#fff;border-radius:10px;padding:8px 14px;font-size:20px;font-weight:700}
+.badge small{display:block;font-size:13px;font-weight:500;opacity:.9}
+.item{font-size:15px;color:var(--muted)}
+.how{font-size:17px;line-height:1.5;margin:6px 0 12px}
+blockquote{margin:0;padding:10px 12px;border-left:4px solid var(--line);background:#faf9f5;font-size:15px;line-height:1.5}
+.src{font-size:12.5px;color:var(--muted);margin-top:6px}
+.warn{display:inline-block;background:#fff4d6;border:1px solid #f0d58a;color:#6b5200;border-radius:6px;padding:3px 8px;font-size:13px;margin-bottom:10px}
+.ask{font-size:17px;font-weight:600;margin:0 0 10px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{border:2px solid var(--accent);background:#fff;color:var(--accent);border-radius:10px;padding:9px 14px;font-size:15px;cursor:pointer;font-weight:600}
+.opt.sel{background:var(--accent);color:#fff}
+.muted{color:var(--muted)}
+.unknown h3{margin:0 0 6px}
+footer{display:flex;justify-content:space-between;gap:12px;padding:12px 20px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);background:#fff}
+.link{background:none;border:none;color:var(--accent);text-decoration:underline;cursor:pointer;font-size:12.5px;white-space:nowrap}
+dialog{border:1px solid var(--line);border-radius:14px;max-width:520px;width:90%}
+dialog table{border-collapse:collapse;width:100%;font-size:14px}dialog td{border-bottom:1px solid var(--line);padding:4px 6px}
+menu{display:flex;gap:8px;justify-content:flex-end;padding:0}
+.fb{margin-top:12px;font-size:13.5px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.fb button{border:1px solid var(--line);background:#fff;border-radius:8px;padding:4px 10px;cursor:pointer}

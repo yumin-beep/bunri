@@ -1,0 +1,22 @@
+{
+ "paper":      {"ko":"종이류","en":"Paper","color":"#2f6fb3","how_en":"Keep it dry, flatten, stack and tie it."},
+ "paper_pack": {"ko":"종이팩","en":"Paper cartons","color":"#4a8fd1","how_en":"Rinse, dry, and use the carton box, not the paper pile."},
+ "can":        {"ko":"캔류","en":"Cans","color":"#8a6d3b","how_en":"Empty, rinse, nothing inside."},
+ "metal":      {"ko":"고철류","en":"Scrap metal","color":"#6b5b4b","how_en":"Keep other materials off it."},
+ "glass":      {"ko":"유리병","en":"Glass bottles","color":"#2e8b57","how_en":"Empty, rinse, don't break."},
+ "plastic":    {"ko":"플라스틱","en":"Plastic","color":"#d9822b","how_en":"Empty, rinse, remove labels and other parts."},
+ "clear_pet":  {"ko":"투명페트병","en":"Clear PET bottles","color":"#1aa3a3","how_en":"Empty, label off, crush, cap on. Separate from other plastic."},
+ "vinyl":      {"ko":"비닐류","en":"Plastic film","color":"#b5527a","how_en":"Empty, rinse, put in a bag so it doesn't blow away."},
+ "styrofoam":  {"ko":"스티로폼","en":"Styrofoam","color":"#7d7db8","how_en":"Clean, remove tape and stickers."},
+ "clothes":    {"ko":"의류수거함","en":"Clothing bin","color":"#8e5ea2","how_en":"Use the clothing collection box; keep it dry."},
+ "general":    {"ko":"종량제봉투","en":"General waste (pay-as-you-throw bag)","color":"#555555","how_en":"Put it in your district's paid garbage bag."},
+ "food":       {"ko":"음식물","en":"Food waste","color":"#6a9a1f","how_en":"Food waste bin or bag."},
+ "nonburnable":{"ko":"불연성","en":"Non-burnable waste","color":"#9a6324","how_en":"Special non-burnable sack per your district."},
+ "bulky":      {"ko":"대형폐기물","en":"Bulky waste (report & sticker)","color":"#a83232","how_en":"Report it to your district and attach the fee sticker."},
+ "ewaste":     {"ko":"폐가전","en":"E-waste (free pickup)","color":"#3b5998","how_en":"Electronics: e-waste collection (free pickup for many items)."},
+ "dropoff":    {"ko":"전용수거함","en":"Special drop-off box","color":"#c0392b","how_en":"Take it to the dedicated collection box."},
+ "consult":    {"ko":"판매처 문의","en":"Ask the seller / specialist","color":"#7f8c8d","how_en":"Not regular household waste. Ask the seller or a specialist."},
+ "material":   {"ko":"재질별","en":"Depends on material","color":"#95a5a6","how_en":"Sort by what it's made of."},
+ "local":      {"ko":"지자체 기준","en":"Check your district","color":"#7f8c8d","how_en":"Follows your district's ordinance."},
+ "note":       {"ko":"안내문 참고","en":"See instructions","color":"#7f8c8d","how_en":"Follow the instructions below."}
+}
