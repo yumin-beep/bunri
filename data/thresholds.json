@@ -1,1 +1,1 @@
-{"reject":0.15,"accept":0.5,"margin":0.02}
+{"reject":0.15,"accept":0.5,"margin":0.06,"agree":0.35,"ratio":0.9,"options":{"context":true,"unseen":0.5,"known":false}}

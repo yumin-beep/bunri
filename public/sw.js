@@ -1,6 +1,6 @@
 // Offline support. App shell is cache-first; kb.json (the rules) is network-first
 // so rule updates reach installed copies, with the cached copy as offline fallback.
-const C = 'bunri-2026-11-01b';
+const C = 'bunri-2026-11-15';
 const FILES = ['./', 'index.html', 'style.css', 'app.js', 'matcher.js', 'kb.json', 'manifest.webmanifest', 'icon.svg'];
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(C).then(c => c.addAll(FILES))); });
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== C).map(k => caches.delete(k))))));

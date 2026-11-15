@@ -1,0 +1,160 @@
+#query	gold_key — v4 TEST set written 2026-11-15 KST after seeing only v3 baseline errors and before any change. Never run until the final report. v3 became the dev set for this round.
+#label fix 11/15 (before any v4 run): sneakers/운동화 gold → 신발 (guide p.30 신발 = 종량제봉투; 구두·샌들 p.28 allows both)
+leftover kimchi gone bad	상한 음식
+rotten fruit	상한 음식
+썩은 과일	상한 음식
+mandarin peel	오렌지껍질
+귤 껍데기	오렌지껍질
+eggshell from breakfast	계란껍질
+coffee filter grounds	커피원두 찌꺼기
+녹차 티백	티백(녹차)
+fish leftovers	생선(먹고 남은)
+oil left in the frying pan	튀김기름
+폐식용유	기름(식용)
+olive oil plastic bottle	식용유용기(플라스틱)
+식용유 통	식용유용기(플라스틱)
+sparkling water bottle	투명페트병
+투명 생수병	투명페트병
+colored soda bottle	페트병
+사이다 병 플라스틱	페트병
+laundry detergent jug	플라스틱 용기(음료·세정용기)
+섬유유연제 통	플라스틱 용기(음료·세정용기)
+body wash bottle	샴푸용기
+바디워시 통	샴푸용기
+plastic spray bottle	분무기(플라스틱)
+plastic lid	캡(플라스틱 뚜껑)
+병뚜껑 플라스틱	캡(플라스틱 뚜껑)
+soda can	음료수캔, 맥주캔, 통조림캔
+spam tin	음료수캔, 맥주캔, 통조림캔
+스팸 캔	음료수캔, 맥주캔, 통조림캔
+butane gas can	스프레이, 부탄가스
+deodorant spray	스프레이, 부탄가스
+bug spray	살충제 용기
+beer bottle cap	맥주병뚜껑(철, 알루미늄)
+병따개로 딴 뚜껑	맥주병뚜껑(철, 알루미늄)
+old pot lid made of glass	냄비뚜껑(강화유리)
+metal kettle	주전자(철, 알루미늄)
+dumbbells	아령
+nails and screws	못
+철사 조각	철사
+saw	톱
+cardboard	골판지
+박스 접어서	종이상자
+shoe box	종이상자
+신발 상자	종이상자
+paper bag	서류봉투(갈색 종이)
+갈색 서류봉투	서류봉투(갈색 종이)
+calendar	탁상달력
+old diary	수첩
+encyclopedia	백과사전
+leaflet	전단지
+전단지 코팅	전단지
+wrapping paper	포스터, 포장지
+paper towel roll core	종이심
+아이스크림 종이컵	종이컵
+coffee cup paper	종이컵
+soy milk carton	종이팩(우유팩 등)
+멸균팩	종이팩(우유팩 등)
+우유 팩	우유팩
+pizza box	피자박스
+치킨 박스 기름 묻은 거	치킨박스
+thermal receipt	영수증(감열지)
+영수증	영수증(감열지)
+sticker flyer magnet	자석전단지
+wallpaper scraps	벽지
+gold foil paper	금박지, 은박지
+coated paper	코팅된 종이
+plastic bag	비닐봉지(일회용)
+비닐봉투	비닐봉지(일회용)
+chip packet	비닐 포장재
+빵 봉지	비닐 포장재
+delivery plastic bag	택배 비닐
+택배 봉투 비닐	택배 비닐
+air cap	완충재(뽁뽁이)
+mesh onion bag	양파망
+plastic wrap	랩(사용 후)
+aluminium foil	호일(사용 후)
+은박지 호일	호일(사용 후)
+styrofoam box	스티로폼 완충재
+컵라면 용기	코팅·접착된 스티로폼
+ice pack	아이스팩
+hand warmer	핫팩
+battery	건전지
+보조배터리	충전식전지
+phone battery	휴대폰 배터리
+fluorescent lamp	형광등
+LED bulb	OOS
+incandescent bulb	백열전구
+medicine	약 종류
+알약	약 종류
+shattered glass	깨진 유리
+깨진 유리컵	깨진 유리
+broken bowl ceramic	도자기류
+earthenware pot	뚝배기
+뚝배기	뚝배기
+mug	머그컵(도자기류)
+mirror	거울
+mask	마스크
+일회용 마스크	마스크
+wet tissue	물티슈
+diaper	종이기저귀
+cotton pad	솜
+dental floss	OOS
+razor	면도기(일회용)
+used lighter	라이터(일회용)
+pencils	연필, 색연필
+eraser	지우개
+marker	마커펜, 만년필
+photo	사진
+dvd	CD, DVD
+umbrella broken	우산
+우산 버리기	우산
+clothes	의류
+옷	의류
+shoes	신발
+운동화	신발
+hat	모자(의류)
+duvet	이불
+베개	침구류(이불, 베개 등)
+stuffed animal	인형류
+인형	인형류
+plastic toy	장난감류
+rug	카펫, 융단
+curtain	커튼, 커튼레일
+sofa	응접세트
+소파	응접세트
+bed frame	침대
+wardrobe	장롱
+bookshelf	책상, 책장
+bike	자전거
+stroller	유모차
+washing machine	세탁기
+에어컨	에어컨
+air conditioner	에어컨
+monitor	모니터(컴퓨터, TV)
+keyboard	키보드(컴퓨터용)
+headphones	헤드폰
+earphones	헤드폰
+smartphone	휴대전화
+스마트폰	휴대전화
+kettle electric	전기포트
+toaster	토스터기
+power strip	콘센트
+멀티탭	콘센트
+charger cable	전기코드류
+plant pot	화분, 화병
+dead houseplant	식물, 나무
+fallen leaves	낙엽
+wooden chopsticks	나무젓가락
+car tire	타이어
+motor oil	엔진오일
+glue	접착제(본드 등)
+candle	양초
+contact lens	콘텍트렌즈
+dentures	틀니
+pet pee pad	애완동물 용변 시트
+gum	OOS
+tampon	OOS
+coffee capsule	OOS
+plastic fork	OOS
+car battery	OOS

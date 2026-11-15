@@ -1,7 +1,7 @@
 // Records the demo: real app in Chromium + caption overlay, 1280x720.
 // Scene lengths follow the narration clips in video/narration/nNN.wav when they exist.
 // Writes /tmp/vid/scenes.json (start time of each scene, seconds from video start) for mux.cjs.
-// Before running: cp video/slides.html public/_slides.html; python3 -m http.server 8765 -d public
+// Before running: cp video/slides.html public/_slides.html; cp <poster screenshot> public/_poster.png; python3 -m http.server 8765 -d public
 const { chromium } = require('playwright');
 const fs = require('fs'), path = require('path'), { execSync } = require('child_process');
 const BASE = 'http://localhost:8765/';
@@ -40,11 +40,11 @@ const dur = n => { const f = path.join(NARR, `n${String(n).padStart(2, '0')}.wav
   await scene(4, 4000, async () => { await cap('Type what you are throwing away. Words in the query can answer the follow-up.'); await type('greasy pizza box'); });
   await scene(5, 3500, () => cap('Every answer quotes the official text, with page and link.'));
   await scene(6, 3500, async () => { await cap('Not oily? One tap changes the answer.'); await p.click('button[data-opt="1"]'); });
-  await scene(7, 6000, async () => { await cap('A typo still finds it. Not sure? It offers 3 options instead of guessing.'); await type('계란 껍떼기'); await wait(2200); await p.click('button[data-item-pick]'); await down(); });
+  await scene(7, 6000, async () => { await cap('A typo still finds it. Not sure? It offers 3 options instead of guessing.'); await type('계란 껍떼기'); await wait(2400); await type('bottle cap'); await wait(1800); await p.locator('button[data-item-pick]').nth(1).click(); await down(); });
   await scene(8, 5500, async () => { await cap('When the answer depends on something, it asks one question.'); await type('pet bottle'); await wait(1800); await p.click('button[data-opt="0"]'); });
   await scene(9, 5000, async () => { await type('umbrella'); await wait(1600); await p.click('button[data-opt="1"]'); });
   await scene(10, 7000, async () => { await cap('Rules change. Newer official rules override the old guide, and the old text stays visible.'); await type('soy milk carton'); });
-  await scene(11, 5000, async () => { await cap('Not in the official guide? It says so, and does not make up a rule.'); await type('hair dryer'); });
+  await scene(11, 5000, async () => { await cap('Not in the official guide? It says so, and does not make up a rule.'); await type('cigarette butts'); });
   await scene(12, 7000, async () => { await cap('Korean interface for residents. Same data, same sources.'); await p.click('button[data-lang="ko"]'); await wait(500); await type('아이스팩'); await wait(2500); await type('멸균팩'); });
   await p.click('button[data-lang="en"]'); await wait(300);
   await scene(13, 5000, async () => { await cap('A pilot log on the device counts lookups, unknown items and "still not sure".'); await p.fill('#q', ''); await p.evaluate(() => document.getElementById('out').innerHTML = ''); await p.click('#pilot'); });

@@ -1,6 +1,6 @@
 // Builds public/kb.json from the source tables in data/.
 import fs from 'fs';
-import { buildIndex } from '../src/matcher.js';
+import { buildIndex, setOptions } from '../src/matcher.js';
 
 const tsv = f => fs.readFileSync(f, 'utf8').trim().split('\n').filter(l => l && !l.startsWith('#')).map(l => l.split('\t'));
 const src = new Map();
@@ -33,9 +33,10 @@ for (let [ko, enName, aliases, bin, ask] of tsv('data/items.tsv')) {
   const names = new Set([ko, ko.replace(/\(.*?\)/g, ''), ...ko.split(/,\s*/), enName, ...enName.split(/,\s*/), ...(aliases ? aliases.split(';') : [])]);
   for (const n of names) if (n.trim()) docs.push({ text: n.trim(), itemId: id });
 }
+const { options = {}, ...th } = JSON.parse(fs.readFileSync('data/thresholds.json', 'utf8'));
+setOptions(options);
 const index = buildIndex(docs);
-const th = JSON.parse(fs.readFileSync('data/thresholds.json', 'utf8'));
 fs.mkdirSync('public', { recursive: true });
 fs.copyFileSync('src/matcher.js', 'public/matcher.js');
-fs.writeFileSync('public/kb.json', JSON.stringify({ version: '2026-11-01b', bins, questions, sources, items, index, thresholds: th }));
+fs.writeFileSync('public/kb.json', JSON.stringify({ version: '2026-11-15', bins, questions, sources, items, index, thresholds: th, options }));
 console.log(`items ${items.length}, docs ${docs.length}, features ${Object.keys(index.idf).length}, kb ${(fs.statSync('public/kb.json').size / 1024).toFixed(0)} KB`);

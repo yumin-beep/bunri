@@ -1,0 +1,186 @@
+#query	gold_key — v3 held-out set written 2026-11-15 KST BEFORE any v3 matcher/alias change; never used for tuning. Gold keys only, no alias edits look at these.
+#label fix 11/15 (before any v4 run): sneakers/운동화 gold → 신발 (guide p.30 신발 = 종량제봉투; 구두·샌들 p.28 allows both)
+empty soju bottle	소주병, 맥주병
+green beer bottle from the convenience store	소주병, 맥주병
+빈 소주병 어디다 버려	소주병, 맥주병
+wine bottle after dinner party	음료수병, 와인병, 양주병
+양주병 빈 거	음료수병, 와인병, 양주병
+clear water bottle with the label	투명페트병
+생수병 라벨 떼고	투명페트병
+삼다수 빈 병	투명페트병
+coke bottle plastic	페트병
+brown plastic beer bottle	페트병
+콜라 페트병	페트병
+yogurt drink plastic bottle	플라스틱 용기(음료·세정용기)
+dish soap bottle empty	플라스틱 용기(음료·세정용기)
+세제통 다 쓴 거	플라스틱 용기(음료·세정용기)
+empty shampoo bottle	샴푸용기
+린스통	샴푸용기
+squeezed toothpaste tube	치약용기
+다 쓴 치약	치약용기
+ketchup squeeze bottle	케찹용기
+마요네즈 통	마요네즈용기
+bottle caps plastic	캡(플라스틱 뚜껑)
+plastic straw from bubble tea	빨대
+버블티 빨대	빨대
+tuna can	음료수캔, 맥주캔, 통조림캔
+참치캔	음료수캔, 맥주캔, 통조림캔
+empty beer can	음료수캔, 맥주캔, 통조림캔
+캔커피 빈캔	음료수캔, 맥주캔, 통조림캔
+camping gas canister	스프레이, 부탄가스
+부탄가스 다 쓴 거	스프레이, 부탄가스
+hairspray can	스프레이, 부탄가스
+mosquito spray can	살충제 용기
+dog food tin	애완동물 음식캔
+고양이 캔 사료 빈 캔	애완동물 음식캔
+metal lid of a jam jar	유리병 뚜껑(철, 알루미늄)
+잼병 뚜껑	유리병 뚜껑(철, 알루미늄)
+old frying pan	후라이팬
+코팅 벗겨진 프라이팬	후라이팬
+pressure rice pot without the electric part	압력솥
+broken scissors	가위
+dry cleaner wire hanger	옷걸이(세탁소 흰색 철사)
+세탁소 철사 옷걸이	옷걸이(세탁소 흰색 철사)
+amazon style shipping box	택배상자
+택배박스 테이프 붙은 거	택배상자
+cereal box	종이상자
+과자 상자	종이상자
+old newspapers	신문지
+지난 신문	신문지
+magazines from the dentist	잡지
+old textbook	책
+헌 책	책
+spiral notebook	공책, 노트
+다 쓴 공책	공책, 노트
+milk carton	우유팩
+우유곽	우유팩
+juice box with foil inside	종이팩(우유팩 등)
+두유팩	종이팩(우유팩 등)
+paper coffee cup	종이컵
+일회용 종이컵	종이컵
+pizza box with cheese stuck	피자박스
+피자 상자	피자박스
+fried chicken box	치킨박스
+치킨 상자	치킨박스
+cash register receipt	영수증(감열지)
+카드 영수증	영수증(감열지)
+glossy flyer	전단지
+광고 전단	광고전단지
+business cards	명함
+gift wrapping paper	포스터, 포장지
+toilet paper tube	종이심
+휴지심	종이심
+plastic shopping bag	비닐봉지(일회용)
+검은 비닐봉지	비닐봉지(일회용)
+ramen wrapper	비닐 포장재
+라면 봉지	비닐 포장재
+snack bag	비닐 포장재
+과자봉지	비닐 포장재
+parcel poly mailer	택배 비닐
+bubble wrap	완충재(뽁뽁이)
+뽁뽁이	완충재(뽁뽁이)
+foil bubble wrap insulation	은박 에어캡
+onion mesh bag	양파망
+cling film with food on it	더러운 랩필름
+음식 묻은 랩	더러운 랩필름
+used tin foil	호일(사용 후)
+쿠킹호일 쓴 거	호일(사용 후)
+styrofoam from a tv box	스티로폼 완충재
+스티로폼 박스	스티로폼 완충재
+instant noodle cup styrofoam with red stain	코팅·접착된 스티로폼
+banana peels	바나나껍질
+귤껍질	오렌지껍질
+pineapple skin	파인애플껍질
+egg shells	계란껍질
+달걀껍데기	계란껍질
+used coffee grounds	커피원두 찌꺼기
+커피 찌꺼기	커피원두 찌꺼기
+tea bags	티백(녹차)
+fish bones and leftovers	생선(먹고 남은)
+moldy leftovers	상한 음식
+상한 반찬	상한 음식
+used cooking oil from frying	튀김기름
+식용유 쓰고 남은 거	기름(식용)
+AA batteries	건전지
+건전지 버리기	건전지
+power bank	충전식전지
+old phone battery	휴대폰 배터리
+fluorescent tube	형광등
+형광등 버리는 곳	형광등
+broken fluorescent tube	폐형광등(깨진 것)
+old light bulb	백열전구
+expired pills	약 종류
+먹다 남은 감기약	약 종류
+broken mirror	거울
+깨진 컵 유리	깨진 유리
+broken ceramic plate	도자기류
+깨진 사기그릇	도자기류
+ceramic coffee mug	머그컵(도자기류)
+pyrex dish	내열식기류
+glass lid of a pot	냄비뚜껑(강화유리)
+used face mask	마스크
+KF94 마스크	마스크
+wet wipes	물티슈
+baby diapers	종이기저귀
+기저귀	종이기저귀
+cotton buds	면봉
+toothbrush	칫솔
+disposable razor	면도기(일회용)
+lighter	라이터(일회용)
+gel ice pack from delivery	아이스팩
+아이스팩 버리는법	아이스팩
+heat pack	핫팩
+핫팩 다 쓴 거	핫팩
+pens	볼펜
+crayons	크레용
+old photos	사진
+cd	CD, DVD
+video cassette tape	비디오테이프
+umbrella	우산
+고장난 우산	우산
+old sneakers	신발
+헌 옷	의류
+old t-shirts	의류
+winter scarf	머플러(목도리)
+blanket	이불
+old pillow	침구류(이불, 베개 등)
+teddy bear	인형류
+toys	장난감류
+broken chair	의자
+old sofa	응접세트
+mattress	매트, 매트리스
+매트리스 버리기	매트, 매트리스
+desk	책상, 책장
+bicycle	자전거
+자전거 버리는 법	자전거
+suitcase	여행가방(트렁크)
+broken microwave	전자레인지
+old laptop	노트북
+cell phone	휴대전화
+안 쓰는 핸드폰	휴대전화
+hair dryer	OOS
+refrigerator	냉장고(냉동고)
+TV	텔레비전
+electric fan	선풍기
+rice cooker	전기밥솥
+vacuum	청소기
+printer	프린터
+extension cord	콘센트
+cables and chargers	전기코드류
+flower pot	화분, 화병
+yoga mat	요가매트
+helmet	헬멧
+tire	타이어
+engine oil	엔진오일
+paint can with paint left	페인트통(내용물 남음)
+candles	양초
+cigarette butts	OOS
+vape	OOS
+dog poop	OOS
+cat litter	OOS
+syringe needle	OOS
+car	OOS
+asbestos	OOS
+concrete rubble	OOS
+human hair	OOS
+dead plant soil	OOS

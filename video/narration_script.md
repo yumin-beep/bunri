@@ -15,7 +15,7 @@ Each line is read over its scene; record.cjs waits for each line's audio length.
 11. (hair dryer) If an item isn't in the official sources, Bunri says so. It doesn't invent a rule.
 12. (Korean UI) Residents can use it in Korean, with the same data and sources.
 13. (pilot log) A pilot log on the device counts lookups, unknown items, and "still not sure" taps.
-14. (results) On a hundred and twenty-nine fresh test queries, Bunri resolved ninety-three percent, with two wrong-bin answers. A plain search box got twenty-four wrong.
+14. (results) On a hundred and fifty-eight sealed test queries, Bunri answered seventy-three percent directly and resolved ninety-three, with one wrong-bin answer. A plain search box got thirty wrong.
 15. (how) It runs offline in the browser. No server, no API key. Korean is split into letters, so spelling mistakes still match.
-16. (pilot plan) To measure it: four weeks in one dorm or apartment block, counting non-recyclable items in the recycling bags before and after.
+16. (pilot kit) To measure it, the repo has a pilot kit: a QR poster and a bag audit sheet. Four weeks in one building, counting wrong items in the recycling bags before and after.
 17. (end) Bunri. The code is on GitHub.

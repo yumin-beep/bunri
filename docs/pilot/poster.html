@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Bunri poster (A4)</title>
+<style>
+@page { size: A4; margin: 0 }
+* { box-sizing: border-box }
+body { margin: 0; word-break: keep-all; font-family: system-ui, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; color: #1d2b22; background: #fff }
+.page { width: 210mm; height: 297mm; padding: 14mm 16mm 12mm; display: flex; flex-direction: column; gap: 6mm; overflow: hidden }
+h1 { font-size: 30pt; line-height: 1.15; margin: 0 }
+h1 span { display: block; font-size: 22pt; color: #2e6b45; margin-top: 3mm }
+.qr { display: flex; gap: 10mm; align-items: center; border: 1.2mm solid #2e6b45; border-radius: 6mm; padding: 6mm }
+.qr img { width: 60mm; height: 60mm }
+.qr p { font-size: 15pt; margin: 0 0 4mm }
+.qr b { font-size: 18pt }
+.ex { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; font-size: 13pt }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; font-size: 12pt }
+.steps div { background: #eef4ef; border-radius: 3mm; padding: 4mm } .steps i { font-style: normal; font-weight: 700; font-size: 18pt; color: #2e6b45; display: block }
+h2 { font-size: 14pt; margin: 0 0 -4mm; color: #2e6b45 }
+.ex div { border: 0.4mm solid #c9d6cc; border-radius: 3mm; padding: 3mm 4mm }
+.ex b { display: block; font-size: 13.5pt }
+.foot { margin-top: auto; flex-shrink: 0; font-size: 10pt; color: #4b5a50; border-top: 0.4mm solid #c9d6cc; padding-top: 4mm }
+</style></head><body><div class="page">
+<h1>Not sure which bin?<span>어디에 버려야 할지 모르겠다면</span></h1>
+<div class="qr"><div style="text-align:center"><img src="qr.svg" alt="QR code to Bunri"><div style="font-size:10.5pt;margin-top:2mm">yumin-beep.github.io/bunri</div></div>
+  <div><p>Scan, type what you're throwing away, and get the official rule with its source.</p>
+  <p lang="ko">QR을 찍고 버릴 물건을 입력하면, 공식 분리배출 안내 원문으로 답합니다.</p>
+  <b>Korean or English · no sign-up · works offline</b></div></div>
+<h2>Most-missed items · 자주 틀리는 품목</h2>
+<div class="ex">
+  <div><b>Oily pizza box · 기름 묻은 피자박스</b>General waste bag, not paper · 종량제봉투</div>
+  <div><b>Receipt · 영수증</b>General waste (thermal paper) · 종량제봉투</div>
+  <div><b>Soy-milk carton · 두유팩</b>Paper-carton box, not the paper pile · 종이팩</div>
+  <div><b>Ice pack · 아이스팩</b>General waste bag · 종량제봉투</div>
+  <div><b>Eggshells · 계란 껍질</b>General waste, not food waste · 종량제봉투</div>
+  <div><b>Clear water bottle · 투명 생수병</b>Label off, crushed, separate clear-PET collection · 투명페트병</div>
+</div>
+<div class="steps">
+  <div><i>1</i>Type the item, in Korean or English.<br><span lang="ko">물건 이름을 입력</span></div>
+  <div><i>2</i>If it depends (oily? clear?), answer one question.<br><span lang="ko">조건이 있으면 한 번만 질문</span></div>
+  <div><i>3</i>See the bin and the official sentence it comes from.<br><span lang="ko">배출 칸과 공식 원문 확인</span></div>
+</div>
+<div class="foot">Answers quote the Ministry of Environment sorting guide and newer official Q&amp;A. Your district's rules can differ. Pilot: this building, 4 weeks. Questions: building management office.<br>
+<span lang="ko">답은 환경부 「재활용품 분리배출 가이드라인」과 최신 공식 Q&amp;A를 인용합니다. 지역 기준이 다를 수 있습니다.</span></div>
+</div></body></html>

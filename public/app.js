@@ -1,4 +1,4 @@
-import { rank, decide, hintAnswer } from './matcher.js';
+import { rank, decide, hintAnswer, setOptions } from './matcher.js';
 
 const T = {
   en: { lead: 'What are you throwing away?', ph: 'e.g. greasy pizza box, receipt, ice pack…', foot: "Answers quote official sources: the Ministry of Environment sorting guide (재활용품 분리배출 가이드라인) and newer official Q&A. Local rules can differ.",
@@ -20,6 +20,7 @@ const EXAMPLES = { en: ['greasy pizza box', 'receipt', 'ice pack', 'eggshells', 
 let lang = localStorage.getItem('bunri.lang') || 'en';
 const $ = s => document.querySelector(s);
 const kb = await (await fetch('kb.json')).json();
+if (kb.options) setOptions(kb.options);
 const log = JSON.parse(localStorage.getItem('bunri.log') || '[]');
 const saveLog = () => localStorage.setItem('bunri.log', JSON.stringify(log.slice(-5000)));
 
@@ -68,7 +69,7 @@ function run(chosen) {
   const out = $('#out');
   if (!q) { out.innerHTML = ''; current = null; return; }
   const ranked = rank(kb.index, q, 5);
-  const d = decide(ranked, kb.thresholds);
+  const d = decide(ranked, kb.thresholds, kb.items);
   const t = T[lang];
   const shown = d.kind === 'pick' && d.candidates[0].score < 0.3 ? 'unknown' : d.kind;
   current = { q, d, shown, at: new Date().toISOString() };

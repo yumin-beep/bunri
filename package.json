@@ -1,0 +1,10 @@
+{
+  "name": "bunri",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build_kb.mjs",
+    "test": "node scripts/build_kb.mjs && node tests/smoke.mjs",
+    "eval": "node scripts/eval.mjs report"
+  }
+}

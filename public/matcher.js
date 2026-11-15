@@ -21,12 +21,23 @@ export function toJamo(s) {
 
 // Words people add around the item name. Removed before matching.
 const FILLERS = [
-  /어떻게|어디에|어디로|어디|버리는\s*법|버리는\s*방법|버리기|버려요|버려야|버리나요|버릴까요|버리면|분리\s*수거|분리\s*배출|인가요|되나요|맞나요|일까요|하나요|방법|배출/g,
-  /\b(how|do|does|i|to|can|should|where|what|which|bin|throw|throwing|away|out|dispose|disposal|of|recycle|recycling|a|an|the|my|in|korea|please|is|it|this)\b/g,
+  /어떻게|어디에|어디로|어디|버리는\s*법|버리는\s*방법|버리기|버려요|버려야|버리나요|버릴까요|버리면|버려|분리\s*수거|분리\s*배출|인가요|되나요|맞나요|일까요|하나요|방법|배출/g,
+  /\bcan (i|you|we)\b|^can\b/g,
+  /\b(how|do|does|i|to|should|where|what|which|bin|throw|throwing|away|out|dispose|disposal|of|recycle|recycling|a|an|the|my|in|korea|please|is|it|this)\b/g,
 ];
+// Context words: they describe the situation, not the item ("old", "empty", "다 쓴").
+// Removed for matching only; follow-up hints still read the raw query.
+const CONTEXT = [
+  /\b(old|used|empty|emptied|some|any|from|for|after|our|your|leftover|unused|spare|worn|finished)\b/g,
+  /다\s*쓴|다\s*먹은|안\s*쓰는|못\s*쓰는|쓰던|쓴\s*거|어디다|어디에다|버리는\s*곳|버리는\s*법|버리는법|버리려면|버릴\s*때|(?<=\S)\s*거$|^빈\s+|\s빈\s|^헌\s+|^지난\s+/g,
+];
+let useContext = true;
+export function setOptions(o) { if ('context' in o) useContext = o.context; if ('unseen' in o) UNSEEN = o.unseen; if ('known' in o) KNOWN_ONLY = o.known; }
+let UNSEEN = 1, KNOWN_ONLY = false;
 
 export function normalize(q) {
   let s = q.normalize('NFC').toLowerCase();
+  if (useContext) { const t = s; for (const re of CONTEXT) s = s.replace(re, ' '); if (!s.trim()) s = t; }
   for (const re of FILLERS) s = s.replace(re, ' ');
   s = s.replace(/[^\p{L}\p{N}\s]/gu, ' ').replace(/\s+/g, ' ').trim();
   return s;
@@ -70,11 +81,13 @@ function weigh(f, idf) {
 
 export function rank(index, q, k = 5) {
   // unseen n-grams get the max idf so a nonsense query scores low
-  const maxIdf = Math.max(...Object.values(index.idf));
+  const maxIdf = (index._max ??= Math.max(...Object.values(index.idf))) * UNSEEN;
   const f = features(q);
   const idf = new Proxy(index.idf, { get: (o, key) => (key in o ? o[key] : maxIdf) });
   const qv = weigh(f, idf);
-  const words = normalize(q).split(' ').filter(w => w.length > 1).map(w => toJamo(w));
+  let words = normalize(q).split(' ').filter(w => w.length > 1).map(w => toJamo(w));
+  // Only words the guide knows count for coverage; an unknown word ("dentist") says nothing about the item.
+  if (KNOWN_ONLY) { const kw = words.filter(w => known(index, w)); if (kw.length) words = kw; }
   const best = new Map();
   for (const { item, v, t } of index.vecs) {
     let s = 0;
@@ -91,6 +104,14 @@ export function rank(index, q, k = 5) {
   return [...best.entries()].sort((a, b) => b[1] - a[1]).slice(0, k).map(([item, score]) => ({ item, score }));
 }
 
+function known(index, w) {
+  if (('w' + w) in index.idf) return true;
+  const g = '^' + w + '$';
+  let hit = 0, tot = 0;
+  for (let i = 0; i + 3 <= g.length; i++) { tot++; if (('j' + g.slice(i, i + 3)) in index.idf) hit++; }
+  return tot > 0 && hit / tot >= 0.6;
+}
+
 function wordIn(w, t) {
   if (t.includes(w)) return true;
   const n = w.length >= 6 ? 4 : 3;
@@ -101,12 +122,21 @@ function wordIn(w, t) {
 }
 
 // Decide: answer, ask the user to pick among candidates, or say it's not in the guide.
-export function decide(ranked, th) {
+// items (optional): when every close candidate goes to the same bin with the same follow-up,
+// the bin is certain even if the exact entry isn't, so answer with the top one.
+export function decide(ranked, th, items) {
   const top = ranked[0];
   if (!top || top.score < th.reject) return { kind: 'unknown', candidates: ranked.slice(0, 3) };
   const second = ranked[1];
-  if (top.score < th.accept || (second && top.score - second.score < th.margin))
+  if (top.score < th.accept || (second && top.score - second.score < th.margin)) {
+    if (items && th.agree && top.score >= th.agree) {
+      const close = ranked.filter(r => r.score >= top.score * (th.ratio || 0.85));
+      const b = items[top.item];
+      if (close.length > 1 && close.every(r => items[r.item].bin === b.bin && items[r.item].ask === b.ask))
+        return { kind: 'answer', item: top.item, score: top.score, agreed: close.map(r => r.item) };
+    }
     return { kind: 'pick', candidates: ranked.slice(0, 3) };
+  }
   return { kind: 'answer', item: top.item, score: top.score };
 }
 

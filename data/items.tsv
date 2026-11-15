@@ -35,7 +35,7 @@
 기타(악기)	Guitar	guitar;기타	bulky	
 다리미	Iron	clothes iron;iron	ewaste	
 도끼	Axe	axe;ax	metal	
-도자기류	Ceramics, pottery	ceramic;pottery;porcelain;도자기	nonburnable	
+도자기류	Ceramics, pottery	ceramic;pottery;porcelain;도자기;사기그릇;사기	nonburnable	
 돋보기	Magnifying glass	magnifier	general	
 뚝배기	Earthenware pot	ttukbaegi;clay pot	nonburnable	
 디지털카메라	Digital camera	digital camera	ewaste	
@@ -76,7 +76,7 @@
 마우스패드	Mouse pad	mousepad	general	
 마커펜, 만년필	Marker, fountain pen	marker;highlighter;fountain pen;마커;형광펜	general	
 매트, 매트리스	Mattress	mattress;매트리스	bulky	
-맥주병뚜껑(철, 알루미늄)	Beer bottle cap	bottle cap;crown cap;병뚜껑	metal	
+맥주병뚜껑(철, 알루미늄)	Beer bottle cap	metal bottle cap;crown cap;beer cap;쇠 병뚜껑	metal	
 머그컵(도자기류)	Ceramic mug	mug;coffee mug;머그컵	nonburnable	
 머플러(목도리)	Scarf, muffler	scarf;muffler;목도리	clothes	
 메가폰(플라스틱)	Plastic megaphone	megaphone	plastic	
@@ -118,12 +118,12 @@
 사진	Photograph	photo;photograph;picture	general	
 사진인화지	Photo paper	photo paper	general	
 삽	Shovel	shovel;spade	bulky	
-상한 음식	Spoiled food	leftover food;spoiled food;food waste;음식물	food	
+상한 음식	Spoiled food	leftover food;spoiled food;food waste;음식물;moldy food;곰팡이 핀 음식	food	
 쌀통	Rice bin	rice container	bulky	
 쌀포대	Rice sack	rice bag;rice sack	paper	
 생선(먹고 남은)	Leftover fish	fish;fish bones;생선뼈;fish leftovers	food	
 샤프펜슬	Mechanical pencil	mechanical pencil;샤프	general	
-샴푸용기	Shampoo bottle	shampoo bottle;body wash bottle	plastic	
+샴푸용기	Shampoo bottle	shampoo bottle;body wash bottle;conditioner bottle;린스통;린스 용기	plastic	
 서랍장	Chest of drawers	drawers;dresser	bulky	
 서류봉투(갈색 종이)	Brown paper envelope	envelope;kraft envelope	paper	
 선풍기	Electric fan	fan	ewaste	
@@ -162,7 +162,7 @@
 악기	Musical instrument	instrument;violin	general	fits_bag
 압력솥	Pressure cooker	pressure cooker	metal	
 애완동물 용변 시트	Pet pee pad	pee pad;puppy pad;배변패드	general	
-애완동물 음식캔	Pet food can	pet food can;cat food can;dog food can	can	
+애완동물 음식캔	Pet food can	pet food can;cat food can;dog food can;캔사료;고양이 캔	can	
 애완동물집, 운반케이스	Pet house, carrier	pet carrier;kennel	material	
 액자	Picture frame	picture frame;frame	general	fits_bag
 앨범	Photo album	album	general	fits_bag
@@ -174,7 +174,7 @@
 에어매트	Air mattress	air bed;inflatable mattress	general	fits_bag
 에어컨	Air conditioner	aircon;air conditioner	ewaste	
 엔진오일	Engine oil	engine oil;car oil	consult	
-여행가방(트렁크)	Suitcase	suitcase;luggage;carrier	bulky	
+여행가방(트렁크)	Suitcase	suitcase;luggage;carrier;캐리어	bulky	
 역기	Barbell	barbell	metal	
 연필, 색연필	Pencil, colored pencil	pencil;colored pencil	general	
 연필깎이	Pencil sharpener	sharpener	general	
@@ -229,7 +229,7 @@
 체온계(건전지, 디지털)	Digital thermometer	thermometer	note	
 체중계	Bathroom scale	scale;weighing scale	general	fits_bag
 축구공	Soccer ball	football;soccer ball	general	
-콘센트	Power strip, socket	power strip;multitap;멀티탭;socket	general	
+콘센트	Power strip, socket	power strip;multitap;멀티탭;socket;extension cord;연장선	general	
 콘텍트렌즈	Contact lenses	contact lens;렌즈	general	
 쿠션	Cushion	cushion	general	fits_bag
 크레용	Crayon	crayon	general	
@@ -244,7 +244,7 @@
 카펫, 융단	Carpet, rug	carpet;rug	general	fits_bag
 캐비넷	Cabinet	filing cabinet	bulky	
 캔 따개	Can opener	can opener	metal	
-캡(플라스틱 뚜껑)	Plastic cap	bottle cap plastic;plastic lid;뚜껑	plastic	
+캡(플라스틱 뚜껑)	Plastic cap	plastic bottle cap;plastic lid;플라스틱 뚜껑	plastic	
 커튼, 커튼레일	Curtains	curtain;curtain rail	general	fits_bag
 커피메이커	Coffee maker	coffee machine;coffee maker	ewaste	
 커피원두 찌꺼기	Coffee grounds	coffee grounds;used coffee;커피찌꺼기	general	
@@ -293,18 +293,18 @@
 소주병, 맥주병	Soju or beer bottle (deposit)	soju bottle;beer bottle	glass	
 스티로폼 완충재	Styrofoam packaging	styrofoam;polystyrene;eps foam;foam box;스티로폼	styrofoam	
 코팅·접착된 스티로폼	Coated or glued styrofoam	coated styrofoam;insulation foam	general	
-플라스틱 용기(음료·세정용기)	Plastic container	plastic container;detergent bottle;food container;delivery container;배달용기	plastic	
+플라스틱 용기(음료·세정용기)	Plastic container	plastic container;detergent bottle;food container;delivery container;배달용기;dish soap bottle;yogurt drink bottle;세제통;세제 용기;요구르트병	plastic	
 CD, DVD	CD, DVD	cd;dvd;disc	general	
 파일철	Plastic file folder	file folder;binder	general	
 비닐 포장재	Plastic film packaging	snack wrapper;ramen wrapper;vinyl packaging;과자봉지;라면봉지	vinyl	
-더러운 랩필름	Dirty plastic wrap	dirty cling film	general	
+더러운 랩필름	Dirty plastic wrap	dirty cling film;cling film with food;음식 묻은 랩	general	
 식탁보, 돗자리	Tablecloth, picnic mat	tablecloth;picnic mat	general	
 영수증(감열지)	Receipt (thermal paper)	receipt;thermal paper;영수증	general	
 금박지, 은박지	Gold or silver foil paper	foil paper	general	
 벽지	Wallpaper	wallpaper	general	
 자석전단지	Magnetic flyer	fridge magnet flyer	general	
 공책, 노트	Notebook	notebook;exercise book	paper	
-택배상자	Delivery box	delivery box;shipping box;amazon box;coupang box	paper	
+택배상자	Delivery box	delivery box;shipping box;amazon box;coupang box;택배박스	paper	
 폐형광등(깨진 것)	Broken fluorescent lamp	broken fluorescent	general	
 건전지	Dry-cell battery	aa battery;aaa battery;battery	dropoff	
 휴대폰 배터리	Phone battery	phone battery	ewaste	
